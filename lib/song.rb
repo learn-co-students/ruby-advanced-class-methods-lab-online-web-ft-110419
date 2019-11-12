@@ -33,7 +33,7 @@ class Song
   def self.new_from_filename(file)
     my_song = self.new
     my_song.artist_name = file.match(/\b^\w*\b/).to_s
-    my_song.name = file.match(/(?![\b^\w*\b])\s[A-Z][a-z].*(?=[.])/).to_s.strip
+    my_song.name = file.match(/(?![\b^\w*\b\n])\s[A-Z][a-z].*(?=[.])/).to_s.strip
     my_song
   end
   
