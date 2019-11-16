@@ -1,11 +1,9 @@
 class Song
   attr_accessor :name, :artist_name
   @@all = []
-
   def self.all
     @@all
   end
-
   def save
     self.class.all << self
   end
@@ -43,16 +41,13 @@ class Song
     song = self.create
     song.name = array[1]
     song.artist_name = array[0]
-    
     song
   end
   def self.create_from_filename(string)
     result = string.sub!(/.mp3/,'').split(' - ')
-      
       song = self.create
       song.artist_name = result[0]
       song.name = result[1]
-    
       song
   end
   def self.destroy_all
