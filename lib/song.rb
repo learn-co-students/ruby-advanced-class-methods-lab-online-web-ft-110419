@@ -29,7 +29,6 @@ end
        instance = self.find_by_name(name)
      return instance
     else
-   self.create_by_name(name)
    song = self.create_by_name(name)
    song
     end
