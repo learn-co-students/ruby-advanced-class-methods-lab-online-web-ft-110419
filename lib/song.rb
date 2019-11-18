@@ -32,13 +32,13 @@ end
   self.create_by_name(name)
     end
   end
-  def self.create_from_filename(artist_name)
+  def self.create_from_filename(name)
     song = self.new
-    song.name = artist_name
+    song.name = name
     song
   end
   def self.alphabetical
-    @@all.name.sort{|a,b| a <=> b}
+    @@all.sort{|a,b| a.name <=> b.name}
   end
   def self.all
     @@all
