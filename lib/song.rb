@@ -37,6 +37,9 @@ end
     song.name = artist_name
     song
   end
+  def self.alphabetical
+    @@all.name.sort{|a,b| a <=> b}
+  end
   def self.all
     @@all
   end
