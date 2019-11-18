@@ -27,9 +27,11 @@ end
 
     if self.find_by_name(name)
        instance = self.find_by_name(name)
-     instance.name
+     return instance
     else
-  self.create_by_name(name)
+   self.create_by_name(name)
+   song = self.create_by_name(name)
+   song
     end
   end
   def self.create_from_filename(name)
