@@ -34,7 +34,6 @@ end
     end
   end
   def self.new_from_filename(name)
-
     song = self.new
     song_array = name.split(" - ")
     song_and_format = song_array[1].split(".")
@@ -44,8 +43,18 @@ end
 
   end
   def self.create_from_filename(name)
+      song = self.new
+    @@all.push(song)
+    song_array = name.split(" - ")
+    song_and_format = song_array[1].split(".")
+    song.artist_name = song_array[0]
+    song.name = song_and_format[0]
+    song
 
   end
+  def self.destroy_all
+    @@all.clear
+end
   def self.alphabetical
     @@all.sort{|a,b| a.name <=> b.name}
   end
