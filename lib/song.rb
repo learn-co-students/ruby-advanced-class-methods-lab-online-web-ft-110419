@@ -35,8 +35,12 @@ end
   end
   def self.new_from_filename(name)
     song = self.new
-    song.name = name
-    song
+
+    song.name = name.slice!("For Love I Come")
+    song.artist_name
+  end
+  def self.create_from_filename(name)
+
   end
   def self.alphabetical
     @@all.sort{|a,b| a.name <=> b.name}
