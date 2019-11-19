@@ -34,10 +34,10 @@ end
     end
   end
   def self.new_from_filename(name)
-    song = self.new
+    song = self.create
 
-    song.name = name.slice!("For Love I Come")
-    song.artist_name
+    song.name = name.slice(name)
+    song
   end
   def self.create_from_filename(name)
 
