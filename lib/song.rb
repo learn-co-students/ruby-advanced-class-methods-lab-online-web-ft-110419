@@ -34,11 +34,13 @@ end
     end
   end
   def self.new_from_filename(name)
-    song = self.new
-    song.name = name
-    song_array = song.split(" - ")
-    formatf = song_array[1].split(".")
-    formatf[0]
+
+
+    song_array = name.split(" - ")
+    song_and_format = song_array[1].split(".")
+    name1 = song_and_format[0]
+    binding.pry
+
   end
   def self.create_from_filename(name)
 
