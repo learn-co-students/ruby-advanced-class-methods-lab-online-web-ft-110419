@@ -36,7 +36,9 @@ end
   def self.new_from_filename(name)
     song = self.new
     song.name = name
-    song_array = song.split("-")
+    song_array = song.split(" - ")
+    formatf = song_array[1].split(".")
+    formatf[0]
   end
   def self.create_from_filename(name)
 
