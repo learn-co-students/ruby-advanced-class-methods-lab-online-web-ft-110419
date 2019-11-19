@@ -35,11 +35,11 @@ end
   end
   def self.new_from_filename(name)
 
-
+    song = self.new
     song_array = name.split(" - ")
     song_and_format = song_array[1].split(".")
-    name1 = song_and_format[0]
-    binding.pry
+    song.name = song_and_format[0]
+    song.name
 
   end
   def self.create_from_filename(name)
